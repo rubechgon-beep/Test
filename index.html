@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test de Seguridad Informática</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111827;
+        color: white;
+    }
+
+    .contenedor {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #60a5fa;
+    }
+
+    .pregunta {
+        background: #1f2937;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        border: 2px solid transparent;
+    }
+
+    .pregunta h3 {
+        margin-top: 0;
+    }
+
+    label {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        background: #374151;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    label:hover {
+        background: #4b5563;
+    }
+
+    .correcta {
+        background: #166534 !important;
+        border: 2px solid #22c55e;
+    }
+
+    .incorrecta {
+        background: #991b1b !important;
+        border: 2px solid #ef4444;
+    }
+
+    .sinResponder {
+        border: 2px solid #ef4444;
+    }
+
+    button {
+        display: block;
+        margin: 30px auto;
+        padding: 15px 35px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #2563eb;
+        color: white;
+    }
+
+    button:hover {
+        background: #1d4ed8;
+    }
+
+    #resultado {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+
+    #reiniciar {
+        display: none;
+        background: #16a34a;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Test de Seguridad Informática</h1>
+
+    <div id="resultado"></div>
+
+    <form id="test">
+
+        <!-- 1 -->
+        <div class="pregunta">
+            <h3>1. ¿Qué significa CIA en seguridad informática?</h3>
+
+            <label>
+                <input type="radio" name="p1" value="a">
+                a) Control, Internet y Acceso
+            </label>
+
+            <label>
+                <input type="radio" name="p1" value="b">
+                b) Confidencialidad, Integridad y Disponibilidad
+            </label>
+
+            <label>
+                <input type="radio" name="p1" value="c">
+                c) Comunicación, Información y Acceso
+            </label>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="pregunta">
+            <h3>2. ¿Qué protege la confidencialidad?</h3>
+
+            <label>
+                <input type="radio" name="p2" value="a">
+                a) Que los datos estén disponibles
+            </label>
+
+            <label>
+                <input type="radio" name="p2" value="b">
+                b) Que solo las personas autorizadas puedan acceder
+            </label>
+
+            <label>
+                <input type="radio" name="p2" value="c">
+                c) Que los datos se borren
+            </label>
+        </div>
+
+
+        <!-- 3 -->
+        <div class="pregunta">
+            <h3>3. ¿Qué es el phishing?</h3>
+
+            <label>
+                <input type="radio" name="p3" value="a">
+                a) Un antivirus
+            </label>
+
+            <label>
+                <input type="radio" name="p3" value="b">
+                b) Un tipo de firewall
+            </label>
+
+            <label>
+                <input type="radio" name="p3" value="c">
+                c) Un engaño para obtener información
+            </label>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="pregunta">
+            <h3>4. ¿Qué es un malware?</h3>
+
+            <label>
+                <input type="radio" name="p4" value="a">
+                a) Software malicioso
+            </label>
+
+            <label>
+                <input type="radio" name="p4" value="b">
+                b) Un sistema operativo
+            </label>
+
+            <label>
+                <input type="radio" name="p4" value="c">
+                c) Un navegador
+            </label>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="pregunta">
+            <h3>5. ¿Cuál es una buena práctica para las contraseñas?</h3>
+
+            <label>
+                <input type="radio" name="p5" value="a">
+                a) Usar siempre la misma
+            </label>
+
+            <label>
+                <input type="radio" name="p5" value="b">
+                b) Utilizar contraseñas largas y diferentes
+            </label>
+
+            <label>
+                <input type="radio" name="p5" value="c">
+                c) Compartirlas con amigos
+            </label>
+        </div>
+
+
+        <!-- 6 -->
+        <div class="pregunta">
+            <h3>6. ¿Qué hace un firewall?</h3>
+
+            <label>
+                <input type="radio" name="p6" value="a">
+                a) Controla el tráfico de red
+            </label>
+
+            <label>
+                <input type="radio" name="p6" value="b">
+                b) Aumenta la memoria RAM
+            </label>
+
+            <label>
+                <input type="radio" name="p6" value="c">
+                c) Crea documentos
+            </label>
+        </div>
+
+
+        <!-- 7 -->
+        <div class="pregunta">
+            <h3>7. ¿Qué es un virus informático?</h3>
+
+            <label>
+                <input type="radio" name="p7" value="a">
+                a) Un programa que puede infectar otros archivos
+            </label>
+
+            <label>
+                <input type="radio" name="p7" value="b">
+                b) Un antivirus
+            </label>
+
+            <label>
+                <input type="radio" name="p7" value="c">
+                c) Una contraseña
+            </label>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="pregunta">
+            <h3>8. ¿Qué significa autenticación?</h3>
+
+            <label>
+                <input type="radio" name="p8" value="a">
+                a) Cifrar un archivo
+            </label>
+
+            <label>
+                <input type="radio" name="p8" value="b">
+                b) Comprobar la identidad de un usuario
+            </label>
+
+            <label>
+                <input type="radio" name="p8" value="c">
+                c) Borrar una cuenta
+            </label>
+        </div>
+
+
+        <!-- 9 -->
+        <div class="pregunta">
+            <h3>9. ¿Qué es una copia de seguridad?</h3>
+
+            <label>
+                <input type="radio" name="p9" value="a">
+                a) Una copia de los datos para poder recuperarlos
+            </label>
+
+            <label>
+                <input type="radio" name="p9" value="b">
+                b) Un virus
+            </label>
+
+            <label>
+                <input type="radio" name="p9" value="c">
+                c) Una contraseña
+            </label>
+        </div>
+
+
+        <!-- 10 -->
+        <div class="pregunta">
+            <h3>10. ¿Qué es el ransomware?</h3>
+
+            <label>
+                <input type="radio" name="p10" value="a">
+                a) Un navegador
+            </label>
+
+            <label>
+                <input type="radio" name="p10" value="b">
+                b) Malware que bloquea o cifra datos y pide un rescate
+            </label>
+
+            <label>
+                <input type="radio" name="p10" value="c">
+                c) Un sistema operativo
+            </label>
+        </div>
+
+
+        <!-- 11 -->
+        <div class="pregunta">
+            <h3>11. ¿Qué es la integridad de la información?</h3>
+
+            <label>
+                <input type="radio" name="p11" value="a">
+                a) Que cualquiera pueda modificarla
+            </label>
+
+            <label>
+                <input type="radio" name="p11" value="b">
+                b) Que esté disponible siempre
+            </label>
+
+            <label>
+                <input type="radio" name="p11" value="c">
+                c) Que los datos no sean modificados de forma no autorizada
+            </label>
+        </div>
+
+
+        <!-- 12 -->
+        <div class="pregunta">
+            <h3>12. ¿Qué es la disponibilidad?</h3>
+
+            <label>
+                <input type="radio" name="p12" value="a">
+                a) Que los datos estén cifrados
+            </label>
+
+            <label>
+                <input type="radio" name="p12" value="b">
+                b) Que los recursos estén disponibles cuando se necesitan
+            </label>
+
+            <label>
+                <input type="radio" name="p12" value="c">
+                c) Que nadie pueda acceder
+            </label>
+        </div>
+
+
+        <!-- 13 -->
+        <div class="pregunta">
+            <h3>13. ¿Qué es la ingeniería social?</h3>
+
+            <label>
+                <input type="radio" name="p13" value="a">
+                a) Manipular a personas para conseguir información
+            </label>
+
+            <label>
+                <input type="radio" name="p13" value="b">
+                b) Reparar un ordenador
+            </label>
+
+            <label>
+                <input type="radio" name="p13" value="c">
+                c) Crear una red
+            </label>
+        </div>
+
+
+        <!-- 14 -->
+        <div class="pregunta">
+            <h3>14. ¿Qué es el cifrado?</h3>
+
+            <label>
+                <input type="radio" name="p14" value="a">
+                a) Borrar información
+            </label>
+
+            <label>
+                <input type="radio" name="p14" value="b">
+                b) Convertir información para protegerla
+            </label>
+
+            <label>
+                <input type="radio" name="p14" value="c">
+                c) Crear una cuenta
+            </label>
+        </div>
+
+
+        <!-- 15 -->
+        <div class="pregunta">
+            <h3>15. ¿Qué es una vulnerabilidad?</h3>
+
+            <label>
+                <input type="radio" name="p15" value="a">
+                a) Una protección
+            </label>
+
+            <label>
+                <input type="radio" name="p15" value="b">
+                b) Una debilidad que puede ser aprovechada
+            </label>
+
+            <label>
+                <input type="radio" name="p15" value="c">
+                c) Un antivirus
+            </label>
+        </div>
+
+
+        <!-- 16 -->
+        <div class="pregunta">
+            <h3>16. ¿Qué es un ataque DDoS?</h3>
+
+            <label>
+                <input type="radio" name="p16" value="a">
+                a) Un tipo de contraseña
+            </label>
+
+            <label>
+                <input type="radio" name="p16" value="b">
+                b) Un antivirus
+            </label>
+
+            <label>
+                <input type="radio" name="p16" value="c">
+                c) Un ataque que satura un servicio con muchas peticiones
+            </label>
+        </div>
+
+
+        <!-- 17 -->
+        <div class="pregunta">
+            <h3>17. ¿Qué es la autenticación de dos factores?</h3>
+
+            <label>
+                <input type="radio" name="p17" value="a">
+                a) Usar dos contraseñas iguales
+            </label>
+
+            <label>
+                <input type="radio" name="p17" value="b">
+                b) Utilizar dos métodos para verificar la identidad
+            </label>
+
+            <label>
+                <input type="radio" name="p17" value="c">
+                c) Tener dos cuentas
+            </label>
+        </div>
+
+
+        <!-- 18 -->
+        <div class="pregunta">
+            <h3>18. ¿Qué debes hacer ante un correo sospechoso?</h3>
+
+            <label>
+                <input type="radio" name="p18" value="a">
+                a) Abrir todos los enlaces
+            </label>
+
+            <label>
+                <input type="radio" name="p18" value="b">
+                b) No abrir enlaces o archivos sospechosos
+            </label>
+
+            <label>
+                <input type="radio" name="p18" value="c">
+                c) Reenviarlo a todos
+            </label>
+        </div>
+
+
+        <!-- 19 -->
+        <div class="pregunta">
+            <h3>19. ¿Por qué es importante actualizar el software?</h3>
+
+            <label>
+                <input type="radio" name="p19" value="a">
+                a) Para gastar más batería
+            </label>
+
+            <label>
+                <input type="radio" name="p19" value="b">
+                b) Para corregir errores y vulnerabilidades
+            </label>
+
+            <label>
+                <input type="radio" name="p19" value="c">
+                c) Para borrar archivos
+            </label>
+        </div>
+
+
+        <!-- 20 -->
+        <div class="pregunta">
+            <h3>20. ¿Qué es un antivirus?</h3>
+
+            <label>
+                <input type="radio" name="p20" value="a">
+                a) Un programa para navegar por Internet
+            </label>
+
+            <label>
+                <input type="radio" name="p20" value="b">
+                b) Un programa que detecta y ayuda a eliminar malware
+            </label>
+
+            <label>
+                <input type="radio" name="p20" value="c">
+                c) Un tipo de contraseña
+            </label>
+        </div>
+
+
+        <button type="button" onclick="corregir()">
+            CORREGIR TEST
+        </button>
+
+        <button type="button" id="reiniciar" onclick="location.reload()">
+            REPETIR TEST
+        </button>
+
+    </form>
+
+</div>
+
+
+<script>
+
+const respuestas = [
+    "b",
+    "b",
+    "c",
+    "a",
+    "b",
+    "a",
+    "a",
+    "b",
+    "a",
+    "b",
+    "c",
+    "b",
+    "a",
+    "b",
+    "b",
+    "c",
+    "b",
+    "b",
+    "b",
+    "b"
+];
+
+
+function corregir(){
+
+    let aciertos = 0;
+
+
+    for(let i=1;i<=20;i++){
+
+        const pregunta =
+            document.querySelector(
+                `[name="p${i}"]`
+            ).closest(".pregunta");
+
+
+        const opciones =
+            document.querySelectorAll(
+                `[name="p${i}"]`
+            );
+
+
+        const seleccionada =
+            document.querySelector(
+                `[name="p${i}"]:checked`
+            );
+
+
+        pregunta.classList.remove(
+            "sinResponder"
+        );
+
+
+        opciones.forEach(opcion=>{
+
+            const label =
+                opcion.parentElement;
+
+            label.classList.remove(
+                "correcta",
+                "incorrecta"
+            );
+
+
+            /*
+            Mostrar siempre la respuesta correcta
+            en verde.
+            */
+
+            if(
+                opcion.value ===
+                respuestas[i-1]
+            ){
+
+                label.classList.add(
+                    "correcta"
+                );
+
+            }
+
+        });
+
+
+        if(seleccionada){
+
+            if(
+                seleccionada.value ===
+                respuestas[i-1]
+            ){
+
+                aciertos++;
+
+            }else{
+
+                seleccionada.parentElement
+                    .classList.add(
+                        "incorrecta"
+                    );
+
+            }
+
+        }else{
+
+            /*
+            Si no responde,
+            la pregunta cuenta como incorrecta.
+            */
+
+            pregunta.classList.add(
+                "sinResponder"
+            );
+
+        }
+
+    }
+
+
+    const nota =
+        (aciertos/20)*10;
+
+
+    document.getElementById(
+        "resultado"
+    ).innerHTML =
+        "Resultado: "+
+        aciertos+
+        "/20 — Nota: "+
+        nota.toFixed(2)+
+        "/10";
+
+
+    document.getElementById(
+        "reiniciar"
+    ).style.display="block";
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
